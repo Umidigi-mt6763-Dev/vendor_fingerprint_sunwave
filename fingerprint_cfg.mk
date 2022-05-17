@@ -23,11 +23,6 @@ PRODUCT_COPY_FILES += $(CONFIG_LOCAL_PATH)/so32/bin/sf_ta:vendor/bin/sf_ta  \
 					  $(CONFIG_LOCAL_PATH)/so32/etc/init/vendor.sw.swfingerprint@1.0-service.rc:vendor/etc/init/vendor.sw.swfingerprint@1.0-service.rc
 
 endif
-# android biometrics service
-# finger default HAL HIDL
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service \
-    android.hardware.biometrics.fingerprint@2.1
    
 PRODUCT_COPY_FILES+= frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml
 DEVICE_MANIFEST_FILE += device/mediatek/common/project_manifest/manifest_fingerprint.xml

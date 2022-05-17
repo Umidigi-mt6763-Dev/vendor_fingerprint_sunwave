@@ -24,7 +24,6 @@ PRODUCT_COPY_FILES += $(CONFIG_LOCAL_PATH)/so32/bin/sf_ta:vendor/bin/sf_ta  \
 
 endif
    
-PRODUCT_COPY_FILES+= frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml
 DEVICE_MANIFEST_FILE += device/mediatek/common/project_manifest/manifest_fingerprint.xml
 DEVICE_MANIFEST_FILE += $(CONFIG_LOCAL_PATH)/sunwave_manifest.xml
 

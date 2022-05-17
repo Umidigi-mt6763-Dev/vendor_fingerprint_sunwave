@@ -10,13 +10,11 @@ $(warning start build fingerprint :$(CUSTOM_KERNEL_FINGERPRINT) ,$(CONFIG_LOCAL_
 
 ifeq ($(MTK_K64_SUPPORT),yes)
 # for 64bit
-PRODUCT_COPY_FILES += $(CONFIG_LOCAL_PATH)/so/bin/sf_ta:vendor/bin/sf_ta  \
-					  $(CONFIG_LOCAL_PATH)/so/lib64/vendor.sw.swfingerprint@1.0.so:vendor/lib64/vendor.sw.swfingerprint@1.0.so  \
+PRODUCT_COPY_FILES += $(CONFIG_LOCAL_PATH)/so/lib64/vendor.sw.swfingerprint@1.0.so:vendor/lib64/vendor.sw.swfingerprint@1.0.so  \
                       $(CONFIG_LOCAL_PATH)/so/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.default.so
 else
 # for 32bit
-PRODUCT_COPY_FILES += $(CONFIG_LOCAL_PATH)/so32/bin/sf_ta:vendor/bin/sf_ta  \
-					  $(CONFIG_LOCAL_PATH)/so32/bin/hw/vendor.sw.swfingerprint@1.0-service:vendor/bin/hw/vendor.sw.swfingerprint@1.0-service  \
+PRODUCT_COPY_FILES += $(CONFIG_LOCAL_PATH)/so32/bin/hw/vendor.sw.swfingerprint@1.0-service:vendor/bin/hw/vendor.sw.swfingerprint@1.0-service  \
 					  $(CONFIG_LOCAL_PATH)/so32/lib/vendor.sw.swfingerprint@1.0.so:vendor/lib/vendor.sw.swfingerprint@1.0.so  \
 					  $(CONFIG_LOCAL_PATH)/so32/lib/hw/fingerprint.default.so:vendor/lib/hw/fingerprint.default.so  \
                       $(CONFIG_LOCAL_PATH)/so32/lib/hw/vendor.sw.swfingerprint@1.0-impl.so:vendor/lib/hw/vendor.sw.swfingerprint@1.0-impl.so  \
